@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <h3>Doctors Detail</h3>
+    <!-- show massage -->
+    <div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>{{successmsg}}</strong> 
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <table class="table ">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Dname</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Qualification</th>
+            <th scope="col">Specialities</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Phone_no</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let us of readData'>
+            <th scope="row">{{us.doctor_id}}</th>
+            <td>{{us.Dname}}</td>
+            <td>{{us.Gender}}</td>
+            <td>{{us.Qualification}}</td>
+            <td>{{us.Specialities}}</td>
+            <td>{{us.Salary}}</td>
+            <td>{{us.Phone_no}}</td>
+            <!-- <td>
+              <button class="btn btn-sm btn-danger" (click)="deleteID(us.id)">Delete</button>
+                &nbsp;
+              
+            </td> -->
+          </tr>
+          
+        </tbody>
+      </table>
+
+</div>

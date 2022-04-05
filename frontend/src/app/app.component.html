@@ -1,0 +1,9 @@
+<app-macros *ngIf="router.url == '/'"></app-macros>
+<app-call-emg *ngIf="router.url == '/'"></app-call-emg>
+
+<app-home></app-home>
+
+<app-banner *ngIf="router.url == '/'"></app-banner>
+<app-latest-articles *ngIf="router.url == '/'"></app-latest-articles>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

@@ -1,0 +1,45 @@
+<div class="container mt-5">
+    <h2>Create Doctor Profile</h2>
+    <!-- show error message -->
+    <div *ngIf="errormsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{errormsg}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+       <!-- data inserted -->
+      <div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{successmsg}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+  <form [formGroup]="userForm" >
+    <div class="col-lg-4 mt-2">
+        <input type="text"  class="form-control" formControlName="Dname" placeholder="Enter Doctor Name">
+    </div>
+      <div class="col-lg-4 mt-2">
+        <input type="text"  class="form-control" formControlName="Gender" placeholder="Enter Gender">
+      </div>
+      <div class="col-lg-4 mt-2">
+        <input type="text" class="form-control" formControlName="Qualification" placeholder="Enter Qualification">
+      </div>
+      <div class="col-lg-4 mt-2">
+        <input type="text" class="form-control" formControlName="Specialities" placeholder="Enter Specialities ">
+      </div>
+      <div class="col-lg-4 mt-2">
+        <input type="number" class="form-control" formControlName="Salary" placeholder="Enter Salary ">
+      </div>
+      <div class="col-lg-4 mt-2">
+        <input type="number" class="form-control" formControlName="Phone_no" placeholder="Enter Phone_no ">
+      </div>
+      <div class="col-lg-4 mt-2" *ngIf="!getparamid" (click)="userSubmit()">
+          <button class="btn btn-primary btn-sm">Create</button> &nbsp;
+  
+      </div>
+      <button class="btn btn-primary btn-sm"><a href="fix-app" style="text-decoration: none; color: white;">Fix Appointment</a></button>
+      
+  </form>
+  <button style="background-color: red;"><a href="docadm" style="text-decoration: none; color: black;">Read Doctor Data</a></button> &nbsp;
+  <button style="background-color: red;"><a href="doc-view" style="text-decoration: none; color: black;">Read Patient Data</a></button> &nbsp;
+  <button style="background-color: red;"><a href="read-app" style="text-decoration: none; color: black;">Read Appointments Data</a></button>
+  
+</div>
+
