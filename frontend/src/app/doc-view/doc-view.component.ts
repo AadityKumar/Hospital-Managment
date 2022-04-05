@@ -24,4 +24,12 @@ export class DocViewComponent implements OnInit {
   });
 }
 
+ // delete data by id
+ deleteID(id:any){
+  this.service.deletePatData(id).subscribe((res)=>{
+      this.successmsg=res.message;
+      this.getAllData();   // use here so, after delete all data get update simultaniously
+  })
+}
+
 }

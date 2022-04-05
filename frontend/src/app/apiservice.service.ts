@@ -50,4 +50,23 @@ getDocPat():Observable<any>{
   creaPatAdm(data:any):Observable<any>{
     return this.http.post('http://localhost:3000/create_pat',data);
  }
+
+
+  //delete data appontment
+  deleteAppData(id:any):Observable<any>{
+    let ids=id;
+     return this.http.delete('http://localhost:3000/det_app/:id')
+  }
+
+   //delete data doctor
+   deleteDocData(id:any):Observable<any>{
+    let ids=id;
+     return this.http.delete('http://localhost:3000/det_doc/:id')
+  }
+
+   //delete data patient
+   deletePatData(id:any):Observable<any>{
+    let ids=id;
+     return this.http.delete('http://localhost:3000/det_pat/:id')
+  }
 }

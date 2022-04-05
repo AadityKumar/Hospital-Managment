@@ -142,4 +142,38 @@ app.post('/create_doc',(req,res)=>{
     })
 })
 
+
+// //delete data of appontment
+// app.delete('/det_app/:id',(req,res)=>{
+//     let gid=req.params.id;
+
+//     let qr= `delete from admin where id='${gid}'`;
+//     db.query(qr,(err,result)=>{
+//         if(err) throw err;
+//         res.send({message:'data deleted'})
+//     })
+// })
+
+// //delete data of doctor
+// app.delete('/det_doc/:id',(req,res)=>{
+//     let gid=req.params.id;
+
+//     let qr= `delete from doctor where doctor_id='${gid}'`;
+//     db.query(qr,(err,result)=>{
+//         if(err) throw err;
+//         res.send({message:'data deleted'})
+//     })
+// })
+
+// //delete data of patient
+// app.delete('/det_pat/:id',(req,res)=>{
+//     let gid=req.params.patient_id;
+
+//     let qr= `delete from patient where id='${gid}'`;
+//     db.query(qr,(err,result)=>{
+//         if(err) throw err;
+//         res.send({message:'data deleted'})
+//     })
+// })
+
 app.listen(3000);

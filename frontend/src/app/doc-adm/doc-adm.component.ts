@@ -33,4 +33,13 @@ export class DocAdmComponent implements OnInit {
     });
   }
 
+
+   // delete data by id
+   deleteID(id:any){
+    this.service.deleteDocData(id).subscribe((res)=>{
+        this.successmsg=res.message;
+        this.getAllData();   // use here so, after delete all data get update simultaniously
+    })
+  }
+
 }
